@@ -48,13 +48,15 @@ body > .navbar .brand:hover {
   text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
 }
 
-body > .navbar .nav {
+
+body > .navbar .nav  {
   float: right;
 }
 
+/*
 body > .navbar .container {
   width: 1450px;
-}
+}*/
 
 /* Sections
 -------------------------------------------------- */
@@ -896,17 +898,13 @@ form.form-g2p button {
   bottom: 270px;
 }
 
-
-
 /* Ads in headers
 -------------------------------------------------- */
 
 .subhead h1,
+
 .subhead .lead {
-  margin-right: 50px;
-}
-.subhead .container {
-  width: 700px;
+  margin-right: 100px;
 }
 
 .carbonad {
@@ -993,9 +991,10 @@ form.form-g2p button {
   }
 
   .subhead h1,
-  .subhead .lead {
+  
+  /*.subhead .lead {
     margin-right: 0;
-  }
+  }*/
 
   .carbonad {
     position: static;

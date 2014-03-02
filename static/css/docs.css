@@ -111,6 +111,7 @@ hr.soften {
   /* background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); *\ /* W3C */
   background: #0D3D4D; /* Old browsers */
   background: -moz-linear-gradient(45deg, #0D3D4D 0% #1E794D 100%); /* FF3.6+ */
+  background: linear-gradient(70deg, #0D3D4D, #1E794D); /* Mozilla Firefox */
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0D3D4D), color-stop(100%,#1E794D)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(45deg, #0D3D4D 0% #1E794D 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(45deg, #0D3D4D 0% #1E794D 100%); /* Opera 11.10+ */

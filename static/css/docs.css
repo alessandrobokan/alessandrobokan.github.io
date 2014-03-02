@@ -678,11 +678,14 @@ h2 + .row {
   margin-bottom: 0;
 }
 
-p.description {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+p.lead {
+	font-size: 17px;
+}
+
+ul.references{
+	margin-left: 50px;
+	font-size: 16px;
+	color: #5a5a5a;
 }
 
 form.bs-docs-example {

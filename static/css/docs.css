@@ -35,9 +35,9 @@ body > .navbar .brand {
   padding-right: 0;
   padding-left: 0;
   margin-left: 20px;
-  float: left;
+  float: right;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
   -webkit-transition: all .2s linear;
      -moz-transition: all .2s linear;
@@ -47,16 +47,6 @@ body > .navbar .brand:hover {
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
 }
-
-
-body > .navbar .nav  {
-  float: right;
-}
-
-/*
-body > .navbar .container {
-  width: 1450px;
-}*/
 
 /* Sections
 -------------------------------------------------- */
@@ -319,7 +309,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 .footer {
   text-align: center;
   padding: 30px 0;
-  margin-top: 150px;
+  margin-top: 90px;
   border-top: 1px solid #e5e5e5;
   background-color: #f5f5f5;
 }
@@ -709,13 +699,9 @@ form.form-g2p button {
   margin-top: 60px;
 }
 
-/*form.form-g2p label {
-  margin-left: 440px;
-  display: inline-block;
-  margin-bottom: 10px;
-  margin-top: 25px;
-  font-size: 16px;
-}*/
+p.download {
+  margin-top: 40px;
+}
 
 /* Images */
 .bs-docs-example-images img {

@@ -127,9 +127,8 @@ hr.soften {
 }
 
 .jumbotron-output {
-  padding: 60px;
+  padding: 24px;
   margin-bottom: 30px;
-  font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   color: inherit;
@@ -138,6 +137,32 @@ hr.soften {
   -webkit-border-radius: 6px;
 }
 
+.jumbotron-output h1{
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+textarea.span3 {
+  font-size: 17px;
+}
+
+.jumbotron-output clr1{
+  color: #336DAC;
+}
+
+.jumbotron-output clr2{
+  color: #336DAC;
+  font-size: 25px;
+}
+
+.jumbotron-output p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
 
 .jumbotron h1 {
   font-size: 80px;

@@ -86,12 +86,19 @@ hr.soften {
 
 /* Base class
 ------------------------- */
-.jumbotron_index {
+.jumbotron {
   position: relative;
   padding: 40px 0;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  /* background: #020031; *\ /* Old browsers */
+  /* background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); *\ /* FF3.6+ */
+  /* background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); *\ /* Chrome,Safari4+ */
+  /* background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%); *\ /* Chrome10+,Safari5.1+ */
+  /* background: -o-linear-gradient(45deg,  #020031 0%,#6d3353 100%); *\ /* Opera 11.10+ */
+  /* background: -ms-linear-gradient(45deg,  #020031 0%,#6d3353 100%); *\ /* IE10+ */
+  /* background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); *\ /* W3C */
   background: #0D3D4D; /* Old browsers */
   background: -moz-linear-gradient(45deg, #0D3D4D 0% #1E794D 100%); /* FF3.6+ */
   background: linear-gradient(70deg, #0D3D4D, #1E794D); /* Mozilla Firefox */
@@ -105,40 +112,6 @@ hr.soften {
      -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
-
-.jumbotron_syllables {
-  position: relative;
-  padding: 40px 0;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-  background: #10181A; /* Old browsers */
-  background: -moz-linear-gradient(45deg, #10181A 0% #7C2E14 100%); /* FF3.6+ */
-  background: linear-gradient(70deg, #10181A, #7C2E14); /* Mozilla Firefox */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#10181A), color-stop(100%,#7C2E14)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, #10181A 0% #7C2E14 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg, #10181A 0% #7C2E14 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg, #10181A 0% #7C2E14 100%); /* IE10+ */
-  background: linear-gradient(45deg, #10181A 0% #7C2E14 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10181A', endColorstr='#7C2E14',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-}
-
-.jumbotron-output {
-  padding: 60px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  color: inherit;
-  background-color: #eeeeee;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-
-
 .jumbotron h1 {
   font-size: 80px;
   font-weight: bold;
@@ -708,6 +681,22 @@ ul.references{
 
 form.bs-docs-example {
   padding-bottom: 19px;
+}
+
+form.form-g2p {
+  margin-bottom: 60px;
+  margin-top: 40px;
+  text-align: center;
+}
+form div.row {
+    display: inline-flex;
+}
+
+form.form-g2p button {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 60px;
 }
 
 p.download {

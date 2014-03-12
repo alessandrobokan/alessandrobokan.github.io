@@ -127,7 +127,7 @@ hr.soften {
 }
 
 .jumbotron-output {
-  padding: 20px;
+  padding: 19px;
   margin-bottom: 30px;
   font-weight: 200;
   line-height: 30px;
@@ -144,8 +144,8 @@ hr.soften {
   line-height: 1;
 }
 
-textarea.span3 {
-  font-size: 17px;
+textarea {
+  font-size: 18px;
 }
 
 .btn-submit {

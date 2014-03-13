@@ -144,13 +144,19 @@ hr.soften {
   line-height: 1;
 }
 
-textarea {
-  font-size: 18px;
+.jumbotron-output h2{
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
-.btn-submit {
-  margin-bottom: 20px;
+.jumbotron-output p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
 }
+
 
 .jumbotron-output clr1{
   color: #336DAC;
@@ -158,15 +164,8 @@ textarea {
 
 .jumbotron-output clr2{
   color: #336DAC;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
-}
-
-.jumbotron-output p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.25;
-  margin-bottom: 30px;
 }
 
 .jumbotron h1 {
@@ -194,6 +193,15 @@ textarea {
   color: #fff;
   text-shadow: 0 0 10px rgba(255,255,255,.25);
 }
+
+textarea {
+  font-size: 18px;
+}
+
+.btn-submit {
+  margin-bottom: 20px;
+}
+
 
 /* Download button */
 .masthead .btn {

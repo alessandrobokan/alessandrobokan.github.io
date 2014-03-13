@@ -28,13 +28,13 @@
 					<a class="brand" href="/">P&#603;t&#638;&#650;s</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="">
+							<li class="active">
 							<a href="/">Home</a>
 							</li>
 							<li class="">
 							<a href="#">Homographic heterophones</a>
 							</li>
-							<li class="active">
+							<li class="">
 							<a href="/syllables">Syllable separator</a>
 							</li>
 							<li class="">
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 
-		<header class="jumbotron jumbotron_syllables subhead" id="overview">
+		<header class="jumbotron jumbotron_index subhead" id="overview">
 		<div class="container">
 			<h1>P&#603;t&#638;&#650;s</h1>
 			<p class="lead">Phonetic transcriber for brazilian user support.</p>
@@ -59,20 +59,22 @@
 
 		
 
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#submit-button').click(function (e) {
 			e.preventDefault();
 			var formURL = $("#form-id").attr("action");
 			var postData = $("#form-id").serializeArray();
-			postData.push({name: 'csrfmiddlewaretoken', value: '75VoGOMO5CG5fVuUJpvJSM0qyXc41flw'});
+			postData.push({name: 'csrfmiddlewaretoken', value: 'km3wbu5C3l4N0PxF2IPucGbFcp2J2SdJ'});
 			$.ajax({
 				url : formURL,
 				type: "POST",
 				data : postData,
 				success: function(data){
-					$(".h1-output").html(data['syllables']);
-					$(".clr2-output").text(data['tonic']);
+					$("#phoneme").html(data['phoneme']);
+					$("#syllables").html(data['syllables']);
+					$("#tonic").text(data['tonic']);
 					$(".alert-error").addClass("hidden");
 					$(".alert-success").removeClass("hidden");
 					$(".message").html("<strong>Success!</strong> " + data["msg"]);
@@ -95,9 +97,10 @@
 
 <div class="container">
 
+<div class="container">
 	<section>
 	<div class="page-header">
-		<h1>What's a Syllable Separator?</h1>
+		<h1>What's P&#603;t&#638;&#650;s transcriber?</h1>
 	</div>
 	<p class="lead" align="justify">
 	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -106,7 +109,7 @@
 	The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 	</p>
 	</section>
-	<section id="example">
+	<section>
 	<div class="page-header">
 		<h1 class="subtitle"> Try it!</h1>
 	</div>
@@ -121,7 +124,7 @@
 	<div class="row">
 		<div class="span4 offset1" align="center">
 			<form id="form-id" action="/" method="POST">
-				<textarea class="span4" name="input" rows = 7 placeholder="Example: chocolate"></textarea>
+				<textarea class="span4" name="input" rows = 7 placeholder="Example: descrédito"></textarea>
 			</form>
 		</div>
 		<div class="span2" align="center">
@@ -129,8 +132,11 @@
 		</div>
 		<div class="span4" align="center">
 			<div class="jumbotron-output">
-				<h1 class='h1-output'>cho-co-<clr1>la</clr1>-te</h1>
-				<p><clr2 class='clr2-output'>la</clr2> <em>is the tonic syllable</em></p>
+				<h1 class='h1-output' id="phoneme">&#676;is-<clr1>k&#638;&#603;</clr1>-&#676;&#618;-t&#650;</h1>
+				<h2 class='h2-output' id="syllables">des-<clr1>cré</clr1>-di-to</h2>
+				<p><clr2 class='clr2-output' id="tonic">cré(k&#638;&#603;)</clr2> <em>is the tonic syllable</em></p>
+				<p><clr2 class='clr2-output' id="prefix">des(&#676;is)</clr2> <em>is the prefix</em></p>
+				<p><clr2 class='clr2-output' id="word">descrédito</clr2> <em>is a Noun</em></p>
 			</div>
 		</div>
 		<div class="span1">
